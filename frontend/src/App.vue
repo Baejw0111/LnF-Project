@@ -2,12 +2,31 @@
   <div id="app">
     <div class="sidebar" v-if="$store.state.isPC">
       <div class="sidebar-header">
-        <div>분실물 센터</div>
+        <div>
+          <span>L</span>
+          <span style="font-size: 53px">&</span>
+          <span>F</span>
+          <span style="font-size: 13px">Lost and Found</span>
+        </div>
       </div>
       <ul>
-        <li><router-link to="/">Regist</router-link></li>
-        <li><router-link to="/list">List</router-link></li>
-        <li><router-link to="/history">Chart</router-link></li>
+        <li>
+          <router-link to="/" :class="{ active: $route.path === '/' }"
+            >Regist</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/list" :class="{ active: $route.path === '/list' }"
+            >List</router-link
+          >
+        </li>
+        <li>
+          <router-link
+            to="/history"
+            :class="{ active: $route.path === '/history' }"
+            >History</router-link
+          >
+        </li>
       </ul>
     </div>
     <router-view v-if="$store.state.isPC" class="costom-router-view" />
@@ -52,7 +71,7 @@ export default {
 
 .sidebar {
   width: 245px;
-  background: #42b983;
+  background: #349167;
   height: 100%;
   overflow: auto;
   position: fixed;
@@ -65,10 +84,12 @@ export default {
 }
 
 .sidebar-header {
+  background: #42b983;
   height: 100px;
-  font-size: 40px;
+  font-size: 65px;
   font-weight: bold;
-  padding-left: 20px;
+  padding-left: 10px;
+  padding-top: 20px;
 
   display: flex;
   align-items: center;
@@ -86,10 +107,16 @@ export default {
   display: block;
   color: #000;
   font-weight: bold;
+  font-size: 25px;
 }
 
 .sidebar li a:hover {
-  background: #215c41;
+  background: #286e4f;
+  color: #fff;
+}
+
+.sidebar li a.active {
+  background: #286e4f;
   color: #fff;
 }
 
@@ -104,8 +131,9 @@ export default {
 
 .router-header {
   padding-left: 20px;
+  padding-top: 10px;
   height: 100px;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 
@@ -113,8 +141,10 @@ export default {
   align-items: center;
 }
 .router-body {
-  padding: 30px;
+  padding: 40px;
   width: 70%;
+  height: 1200px;
+  font-weight: bold;
 
   /* display: flex;
   justify-content: left;
