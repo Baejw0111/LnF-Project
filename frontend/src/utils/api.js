@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// const DOMAIN = "http://13.209.64.54:8080";
-const DOMAIN = "http://localhost:8080";
+const DOMAIN = "http://43.201.65.87:8080";
 
 const request = axios.create({
   baseURL: `${DOMAIN}/api`,
@@ -9,7 +8,6 @@ const request = axios.create({
 
 export const api = {
   list: {
-    // http://13.209.64.54:8080/api/list 요청과 같다.
     findAll: () => request.get("/list"),
     findOne: (id) => request.get(`/list/${id}`),
 

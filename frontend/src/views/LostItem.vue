@@ -4,8 +4,6 @@
       <div>분실물 상세 정보</div>
     </div>
     <div class="router-body detail-body">
-      <!-- <div class="img-container"></div>
-      <div class="text-container"></div> -->
       <b-card
         v-if="data && data.image"
         :img-src="setImage()"
@@ -80,7 +78,7 @@ export default {
 
     // 이미지 세팅
     setImage() {
-      return `http://localhost:8080/${this.data.image}`;
+      return `http://43.201.65.87:8080/${this.data.image}`;
     },
 
     // 목록으로 이동하기

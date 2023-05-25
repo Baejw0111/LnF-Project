@@ -38,13 +38,6 @@ const upload = multer({
       // 저장할 파일 이름 형식
       const saveFileName = fileNameExceptExt + Date.now() + ext;
       done(null, saveFileName);
-
-      /*
-            파일 이름을 이렇게 하는 이유:
-            원래 존재하는 파일의 이름과 같은 파일을 업로드하는 경우
-            원래 파일이 업로드 파일로 덧씌워질 수 있기 때문
-            또한 DB에 파일의 주소를 올릴 거임
-            */
     },
   }),
 });

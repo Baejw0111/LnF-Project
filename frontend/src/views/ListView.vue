@@ -5,7 +5,6 @@
     </div>
     <div class="router-body">
       <div v-for="lost in list" :key="lost.id">
-        <!-- <div @click="moveDetail(lost.id)" class="lost-container"> -->
         <div @click="moveDetail(lost.id)" class="lost-container">
           <div
             class="lost-image"
@@ -41,8 +40,7 @@ export default {
   },
   methods: {
     setImage(image_src) {
-      return `http://localhost:8080/${image_src}`;
-      // return `http://13.209.64.54:8080/${image_src}`;
+      return `http://43.201.65.87:8080/${image_src}`;
     },
     moveDetail(id) {
       this.$router.push(`/list/${id}`);
