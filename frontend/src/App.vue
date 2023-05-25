@@ -141,13 +141,61 @@ export default {
   align-items: center;
 }
 .router-body {
-  padding: 40px;
-  width: 70%;
-  height: 1200px;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* height: 1200px; */
   font-weight: bold;
 
-  /* display: flex;
-  justify-content: left;
+  /* display: flex; */
+  /* justify-content: left;
   align-items: center; */
+}
+
+.register-form {
+  width: 70%;
+}
+
+.history-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  margin: 10px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.history-box {
+  text-align: center;
+  padding-top: 10px;
+  height: 50px;
+  width: 200px;
+}
+
+@media (min-width: 0px) {
+  .info-box {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 600px) {
+  .info-box {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 800px) {
+  .info-box {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .info-box {
+    font-size: 15px;
+  }
 }
 </style>

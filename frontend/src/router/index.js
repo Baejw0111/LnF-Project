@@ -3,23 +3,25 @@ import VueRouter from "vue-router";
 import Regist from "../views/RegistView.vue";
 import List from "../views/ListView.vue";
 import History from "../views/HistoryView.vue";
+import LostItem from "../views/LostItem.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "regist",
     component: Regist,
   },
   {
     path: "/list",
-    name: "list",
     component: List,
   },
   {
+    path: "/list/:id",
+    component: LostItem,
+  },
+  {
     path: "/history",
-    name: "history",
     component: History,
   },
 ];
