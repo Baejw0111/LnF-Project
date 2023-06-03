@@ -17,6 +17,9 @@ const path = require("path");
 const multer = require("multer");
 const { takeCoverage } = require("v8");
 
+// 파일 삭제용
+const fs = require("fs");
+
 // 업로드
 const upload = multer({
   storage: multer.diskStorage({
@@ -139,6 +142,22 @@ app.post("/api/list", upload.single("file"), async (req, res) => {
 // 메뉴 삭제
 app.delete("/api/list/:id", async (req, res) => {
   try {
+    const test = await pool.query("SELECT image FROM LIST WHERE id = ?", [
+      req.params.id,
+    ]);
+
+    const jsonData = JSON.stringify(test[0]);
+    const filePath = JSON.parse(jsonData)[0].image;
+    console.log(filePath);
+
+    fs.unlink(filePath, (err) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log("이미지 파일이 성공적으로 삭제되었습니다.");
+    });
+
     const data = await pool.query("DELETE FROM LIST WHERE id = ?", [
       req.params.id,
     ]);
