@@ -9,7 +9,6 @@
         <div class="history-box">신고 시각</div>
         <div class="history-box">분실물 이름</div>
         <div class="history-box">발견 장소</div>
-        <div class="history-box">수령인 이름</div>
         <div class="history-box">현재 상태</div>
       </div>
       <div v-for="info in history" :key="info.id">
@@ -18,7 +17,6 @@
           <div class="history-box">{{ info.time }}</div>
           <div class="history-box">{{ info.name }}</div>
           <div class="history-box">{{ info.place }}</div>
-          <div class="history-box">{{ info.gettor }}</div>
           <div class="history-box">{{ info.state }}</div>
         </div>
       </div>

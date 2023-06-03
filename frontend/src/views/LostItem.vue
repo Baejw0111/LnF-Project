@@ -78,7 +78,8 @@ export default {
 
     // 이미지 세팅
     setImage() {
-      return `http://43.201.65.87:8080/${this.data.image}`;
+      // return `http://43.201.65.87:8080/${this.data.image}`;
+      return `http://localhost:8080/${this.data.image}`;
     },
 
     // 목록으로 이동하기

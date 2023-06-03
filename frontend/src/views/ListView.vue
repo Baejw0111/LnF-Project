@@ -40,7 +40,8 @@ export default {
   },
   methods: {
     setImage(image_src) {
-      return `http://43.201.65.87:8080/${image_src}`;
+      // return `http://43.201.65.87:8080/${image_src}`;
+      return `http://localhost:8080/${image_src}`;
     },
     moveDetail(id) {
       this.$router.push(`/list/${id}`);

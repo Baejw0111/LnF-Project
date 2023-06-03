@@ -114,6 +114,14 @@ app.post("/api/list", upload.single("file"), async (req, res) => {
       [date, time, name, place, detail, file_path]
     );
 
+    const data2 = await pool.query(
+      `
+        INSERT INTO HISTORY (date, time, name, place, state)
+        VALUES (?,?,?,?,?)
+        `,
+      [date, time, name, place, "등록"]
+    );
+
     return res.json({
       success: true,
       message: "분실물 등록에 성공하였습니다.",
@@ -151,7 +159,7 @@ app.delete("/api/list/:id", async (req, res) => {
 // command
 
 // POST /api/find
-app.post("/api/find", async (req, res) => {
+app.post("/api/find", upload.none(), async (req, res) => {
   try {
     console.log(req.body);
     // DB 업로드
@@ -179,7 +187,7 @@ app.post("/api/find", async (req, res) => {
 });
 
 // POST /api/complete
-app.post("/api/complete", async (req, res) => {
+app.post("/api/complete", upload.none(), async (req, res) => {
   try {
     // DB 업로드
     const { date, time, name, place } = req.body;
@@ -190,6 +198,14 @@ app.post("/api/complete", async (req, res) => {
         VALUES (?,?,?,?,?)
         `,
       [date, time, name, place, 1]
+    );
+
+    const data2 = await pool.query(
+      `
+        INSERT INTO HISTORY (date, time, name, place, state)
+        VALUES (?,?,?,?,?)
+        `,
+      [date, time, name, place, "수령"]
     );
 
     return res.json({

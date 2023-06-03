@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const DOMAIN = "http://43.201.65.87:8080";
+// const DOMAIN = "http://43.201.65.87:8080";
+const DOMAIN = "http://localhost:8080";
 
 const request = axios.create({
   baseURL: `${DOMAIN}/api`,
@@ -36,7 +37,9 @@ export const api = {
       formData.append("time", time);
       formData.append("name", name);
       formData.append("place", place);
-      console.log(formData);
+      // for (const [key, value] of formData.entries()) {
+      //   console.log(`${key}: ${value}`);
+      // }
       return request.post(`/find`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
