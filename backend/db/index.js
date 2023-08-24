@@ -4,7 +4,7 @@ const mysql = require("mysql2/promise");
 
 const pool = mysql.createPool({
   // AWS HOST
-  host: "13.209.64.54",
+  host: "43.201.65.87",
   user: "ssafy",
   password: "ssafy1234",
   database: "minDB",
