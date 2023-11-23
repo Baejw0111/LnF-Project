@@ -32,6 +32,12 @@ RC카를 활용한 분실물 센터(**Lost and Found**) 관리 서비스 프로�
 | :------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------: |
 | <img src="https://static.cdnlogo.com/logos/r/62/raspberry-pi.svg" width="100" height="100"/> | <img src="https://icons.terrastruct.com/dev%2Fpython.svg" width="100" height="100"/> |
 
+### CI/CD
+
+|                                       Nginx                                       |
+| :---------------------------------------------------------------------------------: |
+| <img src="https://icons.terrastruct.com/dev%2Fnginx.svg" width="100" height="100"/> |
+
 ## Web API
 
 ### 분실물 등록, 조회, 수정, 삭제
