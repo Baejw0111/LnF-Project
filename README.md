@@ -10,7 +10,7 @@ RC카를 활용한 분실물 센터(**Lost and Found**) 관리 서비스 프로�
 
 ### BackEnd
 
-|                                       Node.js                                       |                                               Express.js                                               |
+|                                       Node.js                                       |                                             Express.js                                              |
 | :---------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
 | <img src="https://icons.terrastruct.com/dev%2Fnodejs.svg" width="100" heignt="100"> | <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" width="100" heignt="100"> |
 
@@ -38,32 +38,7 @@ RC카를 활용한 분실물 센터(**Lost and Found**) 관리 서비스 프로�
 | :---------------------------------------------------------------------------------: |
 | <img src="https://icons.terrastruct.com/dev%2Fnginx.svg" width="100" height="100"/> |
 
-## Web API
+## 핵심 기능
 
-### 분실물 등록, 조회, 수정, 삭제
-
-- **GET** `/api/list`: 분실물 전체 조회
-
-  - **GET** `/api/list/:id`: 분실물 일부 조회
-
-- **POST** `/api/list`: 분실물 등록
-
-- **PATCH** `/api/list/:id`: 분실물 수정
-
-- **POST** `/api/list/:id/image`: 분실물 이미지 수정
-
-- **DELETE** `/api/list/:id`: 분실물 삭제
-
-### 분실물 찾으러 가기, 수령 완료
-
-- **POST** `/find`: 분실물 찾으러 가는 명령어 DB에 업로드
-
-- **POST** `/complete`: 수령 완료 api
-
-### 분실물 등록 및 수령 내역 조회
-
-- **GET** `/api/history`: 분실물 등록 및 수령 내역 전체 조회
-
-### TODO
-
-- 모바일 버전 하단바 구현
+- OpenCV를 활용한 텍스트 인식기능을 통해 사물함의 물건 정보를 인식하는 기능 수행
+- 관리자 입장에서 분실물을 관리할 수 있도록 웹사이트 제공
