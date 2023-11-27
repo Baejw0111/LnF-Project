@@ -10,9 +10,9 @@ RC카를 활용한 분실물 센터(**Lost and Found**) 관리 서비스 프로�
 
 ### BackEnd
 
-|                                       Node.js                                       |
-| :---------------------------------------------------------------------------------: |
-| <img src="https://icons.terrastruct.com/dev%2Fnodejs.svg" width="100" heignt="100"> |
+|                                       Node.js                                       |                                               Node.js                                               |
+| :---------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+| <img src="https://icons.terrastruct.com/dev%2Fnodejs.svg" width="100" heignt="100"> | <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg" width="100" heignt="100"> |
 
 ### FrontEnd
 
@@ -34,7 +34,7 @@ RC카를 활용한 분실물 센터(**Lost and Found**) 관리 서비스 프로�
 
 ### CI/CD
 
-|                                       Nginx                                       |
+|                                        Nginx                                        |
 | :---------------------------------------------------------------------------------: |
 | <img src="https://icons.terrastruct.com/dev%2Fnginx.svg" width="100" height="100"/> |
 
